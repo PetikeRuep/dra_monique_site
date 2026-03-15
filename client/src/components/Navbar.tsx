@@ -43,12 +43,12 @@ export default function Navbar() {
       <div className="container flex items-center justify-between h-16 md:h-20">
         {/* Logo / Monogram */}
         <Link href="/" className="flex items-center gap-3 group">
-          <div className="relative">
-            <span
-              className="font-script text-2xl md:text-3xl text-[#C9A55A] leading-none tracking-wide"
-            >
-              MD
-            </span>
+          <div className="relative flex items-center justify-center rounded-sm bg-transparent">
+            <img
+              src="https://d2xsxph8kpxj0f.cloudfront.net/310519663062738334/7aJWHo8S3YkG7RHgmPBpW2/LogosomenteMD_cba2f2cf.png"
+              alt="Logo Monique Damiano"
+              className="h-10 w-10 object-contain md:h-12 md:w-12"
+            />
           </div>
           <div className="hidden sm:flex flex-col">
             <span className="font-display text-sm md:text-base font-semibold text-[#5C2B1D] tracking-wide leading-tight">
