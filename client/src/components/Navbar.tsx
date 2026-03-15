@@ -67,7 +67,7 @@ export default function Navbar() {
               <Link
                 key={link.label}
                 href={link.href}
-                className="font-display text-sm tracking-wide text-[#5C2B1D]/70 hover:text-[#5C2B1D] transition-colors duration-300 relative after:content-[''] after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-[1px] after:bg-[#C9A55A] after:transition-all after:duration-300 hover:after:w-full"
+                className="font-display tracking-wide text-[#5C2B1D]/70 hover:text-[#5C2B1D] transition-colors duration-300 relative after:content-[''] after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-[1px] after:bg-[#C9A55A] after:transition-all after:duration-300 hover:after:w-full text-[22px]"
               >
                 {link.label}
               </Link>
@@ -75,7 +75,7 @@ export default function Navbar() {
               <button
                 key={link.label}
                 onClick={() => handleNavClick(link.href)}
-                className="font-display text-sm tracking-wide text-[#5C2B1D]/70 hover:text-[#5C2B1D] transition-colors duration-300 relative after:content-[''] after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-[1px] after:bg-[#C9A55A] after:transition-all after:duration-300 hover:after:w-full"
+                className="font-display tracking-wide text-[#5C2B1D]/70 hover:text-[#5C2B1D] transition-colors duration-300 relative after:content-[''] after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-[1px] after:bg-[#C9A55A] after:transition-all after:duration-300 hover:after:w-full text-[22px]"
               >
                 {link.label}
               </button>

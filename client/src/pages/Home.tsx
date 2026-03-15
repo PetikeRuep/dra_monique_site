@@ -74,7 +74,7 @@ export default function Home() {
           <div className="lg:col-span-5 space-y-6 lg:space-y-8 z-10 order-2 lg:order-1">
             <AnimatedSection>
               <span className="inline-block font-body text-xs tracking-[0.25em] uppercase text-[#5C2B1D]/60 border border-[#C9A55A]/30 px-4 py-1.5 rounded-sm">
-                Dermatologista | Medicina Estética
+                Dermatologia | Medicina Estética
               </span>
             </AnimatedSection>
 
@@ -86,7 +86,7 @@ export default function Home() {
 
             <AnimatedSection delay={300}>
               <p className="font-display italic text-xl md:text-2xl text-[#5C2B1D]/70 leading-relaxed">
-                Pele, Saúde e Beleza com cuidado, amor e planejamento.
+                Pele, Saúde e Beleza
               </p>
             </AnimatedSection>
 
@@ -370,8 +370,8 @@ export default function Home() {
 
             {/* Marau RS */}
             <AnimatedSection delay={150}>
-              <div className="bg-[#2A1208] border border-[#C9A55A]/20 rounded-sm p-8 space-y-4">
-                <div className="flex items-center gap-3">
+              <div className="bg-[#2A1208] border border-[#C9A55A]/20 rounded-sm p-8 h-[283px] flex flex-col justify-center items-center text-center space-y-4">
+                <div className="flex items-center justify-center gap-3">
                   <MapPin className="w-5 h-5 text-[#C9A55A]" />
                   <h3 className="font-display text-xl text-[#F2EDE4]">
                     Marau, RS
