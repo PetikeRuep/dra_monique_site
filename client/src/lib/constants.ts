@@ -26,7 +26,7 @@ export const SITE = {
 
 export const IMAGES = {
   hero: "https://d2xsxph8kpxj0f.cloudfront.net/310519663062738334/7aJWHo8S3YkG7RHgmPBpW2/hero-dra-monique-real_0fe7a07a.png",
-  about: "https://d2xsxph8kpxj0f.cloudfront.net/310519663062738334/7aJWHo8S3YkG7RHgmPBpW2/about-portrait-bHNzBqjAro7hjNers6uuVe.webp",
+  about: "https://d2xsxph8kpxj0f.cloudfront.net/310519663062738334/7aJWHo8S3YkG7RHgmPBpW2/Gemini_Generated_Image_v4pmfnv4pmfnv4pm_aab98995.jpg",
   treatmentDerma: "https://d2xsxph8kpxj0f.cloudfront.net/310519663062738334/7aJWHo8S3YkG7RHgmPBpW2/treatment-derma-SFzdTgTj2xFrH35y2vzHed.webp",
   treatmentEstetica: "https://d2xsxph8kpxj0f.cloudfront.net/310519663062738334/7aJWHo8S3YkG7RHgmPBpW2/treatment-estetica-Y6ApmwWQ8XBHChv4oqfZ4S.webp",
   clinic: "https://d2xsxph8kpxj0f.cloudfront.net/310519663062738334/7aJWHo8S3YkG7RHgmPBpW2/clinic-interior-3q8yZHguLAU49fAC9LtVa2.webp",
