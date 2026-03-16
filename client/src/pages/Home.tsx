@@ -180,7 +180,7 @@ export default function Home() {
                 <img
                   src={IMAGES.about}
                   alt="Dra. Monique Damiano em seu consultório"
-                  className="relative w-full h-[500px] object-cover object-top rounded-sm"
+                  className="relative w-full h-[620px] object-cover object-top rounded-sm"
                   loading="lazy"
                 />
               </div>
