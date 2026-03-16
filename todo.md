@@ -1,5 +1,6 @@
 # TODO
 
-- [ ] Substituir a imagem principal do hero pela foto real da Dra. Monique, preservando o clima visual do fundo atual.
-- [ ] Substituir o monograma MD do canto superior esquerdo pela logo enviada.
-- [ ] Validar o resultado visual no projeto e criar novo checkpoint.
+- [ ] Verificar as edições automáticas recentes no hero, navbar e footer.
+- [ ] Corrigir manualmente a altura da imagem do hero e centralização do texto do card de localização.
+- [ ] Remover o fundo branco da logo no cabeçalho e aplicar a logo também no rodapé sobre o fundo existente.
+- [ ] Validar o resultado visual e criar novo checkpoint.

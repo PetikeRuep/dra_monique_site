@@ -45,7 +45,7 @@ export default function Navbar() {
         <Link href="/" className="flex items-center gap-3 group">
           <div className="relative flex items-center justify-center rounded-sm bg-transparent">
             <img
-              src="https://d2xsxph8kpxj0f.cloudfront.net/310519663062738334/7aJWHo8S3YkG7RHgmPBpW2/LogosomenteMD_cba2f2cf.png"
+              src="https://d2xsxph8kpxj0f.cloudfront.net/310519663062738334/7aJWHo8S3YkG7RHgmPBpW2/LogosomenteMD-transparent_66a4aab4.png"
               alt="Logo Monique Damiano"
               className="h-10 w-10 object-contain md:h-12 md:w-12"
             />

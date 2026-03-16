@@ -12,7 +12,11 @@ export default function Footer() {
       <div className="container">
         {/* Gold Monogram */}
         <div className="text-center mb-10">
-          <span className="font-script text-5xl text-[#C9A55A]">MD</span>
+          <img
+            src="https://d2xsxph8kpxj0f.cloudfront.net/310519663062738334/7aJWHo8S3YkG7RHgmPBpW2/LogosomenteMD-transparent_66a4aab4.png"
+            alt="Logo Monique Damiano"
+            className="h-16 w-16 object-contain mx-auto"
+          />
           <p className="font-display text-lg tracking-[0.15em] mt-3 text-[#F2EDE4]/90">
             Monique Damiano · Medicina e Beleza
           </p>

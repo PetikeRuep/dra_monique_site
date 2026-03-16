@@ -124,7 +124,7 @@ export default function Home() {
                 <img
                   src={IMAGES.hero}
                   alt="Dra. Monique Damiano"
-                  className="relative w-full h-[500px] lg:h-[600px] object-cover object-top rounded-sm"
+                  className="relative w-full h-[500px] lg:h-[520px] object-cover object-top rounded-sm"
                   loading="eager"
                 />
               </div>
@@ -340,8 +340,8 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
             {/* São Paulo */}
             <AnimatedSection>
-              <div className="bg-[#2A1208] border border-[#C9A55A]/20 rounded-sm p-8 space-y-4">
-                <div className="flex items-center gap-3">
+              <div className="bg-[#2A1208] border border-[#C9A55A]/20 rounded-sm p-8 space-y-4 text-center flex flex-col items-center justify-center">
+                <div className="flex items-center justify-center gap-3">
                   <MapPin className="w-5 h-5 text-[#C9A55A]" />
                   <h3 className="font-display text-xl text-[#F2EDE4]">
                     São Paulo, SP
