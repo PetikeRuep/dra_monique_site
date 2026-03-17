@@ -13,7 +13,6 @@ import {
   TREATMENTS_ESTETICA,
   TESTIMONIALS,
   BLOG_POSTS,
-  INSTAGRAM_POSTS,
 } from "@/lib/constants";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -505,8 +504,8 @@ export default function Home() {
             </div>
           </AnimatedSection>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {BLOG_POSTS.slice(0, 3).map((post, i) => (
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6">
+            {BLOG_POSTS.slice(0, 4).map((post, i) => (
               <AnimatedSection key={post.slug} delay={i * 100}>
                 <Link
                   href={`/blog/${post.slug}`}
@@ -554,102 +553,6 @@ export default function Home() {
                 Ver todos os artigos
                 <ArrowRight size={14} />
               </Link>
-            </div>
-          </AnimatedSection>
-        </div>
-      </section>
-
-      {/* ===== SECTION 7: INSTAGRAM ===== */}
-      <section className="py-20 lg:py-28 bg-[#F2EDE4]">
-        <div className="container">
-          <AnimatedSection>
-            <div className="text-center mb-12">
-              <span className="font-body text-xs tracking-[0.25em] uppercase text-[#C9A55A]">
-                Instagram
-              </span>
-              <h2 className="font-display text-4xl md:text-5xl text-[#5C2B1D] mt-3">
-                Me Siga no Instagram
-              </h2>
-              <p className="font-display italic text-lg text-[#5C2B1D]/60 mt-3">
-                Conteúdo autoral, informativo e alinhado à estética da marca
-              </p>
-            </div>
-          </AnimatedSection>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-6">
-            {[
-              {
-                image: "https://d2xsxph8kpxj0f.cloudfront.net/310519663062738334/7aJWHo8S3YkG7RHgmPBpW2/about-portrait-bHNzBqjAro7hjNers6uuVe.webp",
-                title: "Melasma",
-                text: "O melasma exige constância, fotoproteção e um plano individualizado para tratar manchas com segurança.",
-              },
-              {
-                image: "https://d2xsxph8kpxj0f.cloudfront.net/310519663062738334/7aJWHo8S3YkG7RHgmPBpW2/instagram-post-rosacea-kKVJKQvqRxx9bik4rnhnM5.webp",
-                title: "Rosácea",
-                text: "Rosácea não é só sensibilidade. É uma condição inflamatória que precisa de diagnóstico correto e tratamento individualizado.",
-              },
-              {
-                image: "https://d2xsxph8kpxj0f.cloudfront.net/310519663062738334/7aJWHo8S3YkG7RHgmPBpW2/instagram-post-bioestimulador-Q2LitfwVBcFyJTpS2P2yK8.webp",
-                title: "Bioestimuladores",
-                text: "Bioestimuladores de colágeno ajudam a melhorar firmeza, textura e qualidade da pele de forma gradual e natural.",
-              },
-            ].map((post, i) => (
-              <AnimatedSection key={i} delay={i * 80}>
-                <a
-                  href={SITE.instagramUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="group block rounded-sm overflow-hidden bg-[#F7F1E8] border border-[#C9A55A]/20 shadow-[0_20px_60px_rgba(92,43,29,0.08)] hover:-translate-y-1 transition-all duration-500"
-                >
-                  <div className="relative aspect-square overflow-hidden bg-[#F3EDE3]">
-                    <img
-                      src={post.image}
-                      alt={post.title}
-                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.03]"
-                      loading="lazy"
-                    />
-                  </div>
-                  <div className="p-5 md:p-6 text-left space-y-3">
-                    <div className="flex items-center gap-3">
-                      <img
-                        src="https://d2xsxph8kpxj0f.cloudfront.net/310519663062738334/7aJWHo8S3YkG7RHgmPBpW2/about-portrait-bHNzBqjAro7hjNers6uuVe.webp"
-                        alt="Perfil Dra. Monique"
-                        className="w-10 h-10 rounded-full object-cover border border-[#C9A55A]/30"
-                        loading="lazy"
-                      />
-                      <div>
-                        <p className="font-body text-sm text-[#5C2B1D] font-medium leading-none">
-                          Monique Damiano Chiosi
-                        </p>
-                        <p className="font-body text-xs text-[#5C2B1D]/60 mt-1">
-                          {SITE.instagram}
-                        </p>
-                      </div>
-                    </div>
-                    <div className="w-10 h-px bg-[#C9A55A]/60" />
-                    <h3 className="font-display text-2xl text-[#5C2B1D] leading-tight">
-                      {post.title}
-                    </h3>
-                    <p className="font-display text-lg leading-relaxed text-[#5C2B1D]/82">
-                      {post.text}
-                    </p>
-                  </div>
-                </a>
-              </AnimatedSection>
-            ))}
-          </div>
-
-          <AnimatedSection delay={400}>
-            <div className="text-center mt-10">
-              <a
-                href={SITE.instagramUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-7 py-3 bg-[#5C2B1D] text-[#F2EDE4] font-body text-xs tracking-[0.15em] uppercase hover:bg-[#7A3D2A] transition-all duration-300 rounded-sm"
-              >
-                <Instagram size={16} />
-                {SITE.instagram} →
-              </a>
             </div>
           </AnimatedSection>
         </div>
