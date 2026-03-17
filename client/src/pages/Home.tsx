@@ -571,29 +571,68 @@ export default function Home() {
                 Me Siga no Instagram
               </h2>
               <p className="font-display italic text-lg text-[#5C2B1D]/60 mt-3">
-                Conteúdo sobre pele, saúde e beleza todo dia
+                Conteúdo autoral, informativo e alinhado à estética da marca
               </p>
-              <div className="w-16 h-[1px] bg-[#C9A55A] mx-auto mt-6" />
             </div>
           </AnimatedSection>
 
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-3 max-w-4xl mx-auto">
-            {INSTAGRAM_POSTS.map((img, i) => (
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-6">
+            {[
+              {
+                image: "https://d2xsxph8kpxj0f.cloudfront.net/310519663062738334/7aJWHo8S3YkG7RHgmPBpW2/about-portrait-bHNzBqjAro7hjNers6uuVe.webp",
+                title: "Melasma",
+                text: "O melasma exige constância, fotoproteção e um plano individualizado para tratar manchas com segurança.",
+              },
+              {
+                image: "https://d2xsxph8kpxj0f.cloudfront.net/310519663062738334/7aJWHo8S3YkG7RHgmPBpW2/instagram-post-rosacea-kKVJKQvqRxx9bik4rnhnM5.webp",
+                title: "Rosácea",
+                text: "Rosácea não é só sensibilidade. É uma condição inflamatória que precisa de diagnóstico correto e tratamento individualizado.",
+              },
+              {
+                image: "https://d2xsxph8kpxj0f.cloudfront.net/310519663062738334/7aJWHo8S3YkG7RHgmPBpW2/instagram-post-bioestimulador-Q2LitfwVBcFyJTpS2P2yK8.webp",
+                title: "Bioestimuladores",
+                text: "Bioestimuladores de colágeno ajudam a melhorar firmeza, textura e qualidade da pele de forma gradual e natural.",
+              },
+            ].map((post, i) => (
               <AnimatedSection key={i} delay={i * 80}>
                 <a
                   href={SITE.instagramUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="relative group block overflow-hidden rounded-sm aspect-square"
+                  className="group block rounded-sm overflow-hidden bg-[#F7F1E8] border border-[#C9A55A]/20 shadow-[0_20px_60px_rgba(92,43,29,0.08)] hover:-translate-y-1 transition-all duration-500"
                 >
-                  <img
-                    src={img}
-                    alt={`Instagram post ${i + 1}`}
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-                    loading="lazy"
-                  />
-                  <div className="absolute inset-0 bg-[#5C2B1D]/0 group-hover:bg-[#5C2B1D]/60 transition-all duration-500 flex items-center justify-center">
-                    <Instagram className="w-8 h-8 text-[#F2EDE4] opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                  <div className="relative aspect-square overflow-hidden bg-[#F3EDE3]">
+                    <img
+                      src={post.image}
+                      alt={post.title}
+                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.03]"
+                      loading="lazy"
+                    />
+                  </div>
+                  <div className="p-5 md:p-6 text-left space-y-3">
+                    <div className="flex items-center gap-3">
+                      <img
+                        src="https://d2xsxph8kpxj0f.cloudfront.net/310519663062738334/7aJWHo8S3YkG7RHgmPBpW2/about-portrait-bHNzBqjAro7hjNers6uuVe.webp"
+                        alt="Perfil Dra. Monique"
+                        className="w-10 h-10 rounded-full object-cover border border-[#C9A55A]/30"
+                        loading="lazy"
+                      />
+                      <div>
+                        <p className="font-body text-sm text-[#5C2B1D] font-medium leading-none">
+                          Monique Damiano Chiosi
+                        </p>
+                        <p className="font-body text-xs text-[#5C2B1D]/60 mt-1">
+                          {SITE.instagram}
+                        </p>
+                      </div>
+                    </div>
+                    <div className="w-10 h-px bg-[#C9A55A]/60" />
+                    <h3 className="font-display text-2xl text-[#5C2B1D] leading-tight">
+                      {post.title}
+                    </h3>
+                    <p className="font-display text-lg leading-relaxed text-[#5C2B1D]/82">
+                      {post.text}
+                    </p>
                   </div>
                 </a>
               </AnimatedSection>
