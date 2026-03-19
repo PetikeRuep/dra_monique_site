@@ -11,7 +11,6 @@ import {
   IMAGES,
   TREATMENTS_DERMA,
   TREATMENTS_ESTETICA,
-  TESTIMONIALS,
   BLOG_POSTS,
 } from "@/lib/constants";
 import Navbar from "@/components/Navbar";
@@ -28,10 +27,12 @@ import {
   MapPin,
   Phone,
   Instagram,
-  ChevronLeft,
-  ChevronRight,
   ArrowRight,
   Send,
+  Check,
+  HeartHandshake,
+  ScanFace,
+  Gem,
 } from "lucide-react";
 
 export default function Home() {
@@ -40,14 +41,8 @@ export default function Home() {
     description: string;
     details: string;
   }>(null);
-  const [testimonialIndex, setTestimonialIndex] = useState(0);
   const [contactForm, setContactForm] = useState({ nome: "", telefone: "", mensagem: "" });
   const [formSent, setFormSent] = useState(false);
-
-  const nextTestimonial = () =>
-    setTestimonialIndex((i) => (i + 1) % TESTIMONIALS.length);
-  const prevTestimonial = () =>
-    setTestimonialIndex((i) => (i - 1 + TESTIMONIALS.length) % TESTIMONIALS.length);
 
   const handleContactSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -416,73 +411,103 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ===== SECTION 5: DEPOIMENTOS ===== */}
+      {/* ===== SECTION 5: DIFERENCIAIS ===== */}
       <section className="py-20 lg:py-28 bg-[#F2EDE4]">
         <div className="container">
           <AnimatedSection>
-            <div className="text-center mb-14">
+            <div className="text-center mb-14 max-w-3xl mx-auto">
               <span className="font-body text-xs tracking-[0.25em] uppercase text-[#C9A55A]">
-                Depoimentos
+                Diferenciais
               </span>
               <h2 className="font-display text-4xl md:text-5xl text-[#5C2B1D] mt-3">
-                O Que Dizem as Pacientes
+                Uma Dermatologia Guiada por Técnica, Escuta e Naturalidade
               </h2>
+              <p className="font-display italic text-lg text-[#5C2B1D]/65 mt-4 leading-relaxed">
+                Um cuidado pensado para respeitar a individualidade de cada paciente, com olhar clínico, planejamento e foco em resultados elegantes e coerentes com sua beleza.
+              </p>
               <div className="w-16 h-[1px] bg-[#C9A55A] mx-auto mt-6" />
             </div>
           </AnimatedSection>
 
-          <AnimatedSection>
-            <div className="max-w-2xl mx-auto text-center relative">
-              {/* Large quote marks */}
-              <span className="font-display text-8xl text-[#5C2B1D]/10 absolute -top-8 left-0">
-                "
-              </span>
+          <div className="grid grid-cols-1 lg:grid-cols-[1.15fr_0.85fr] gap-8 lg:gap-10 items-stretch">
+            <AnimatedSection>
+              <div className="h-full bg-[#FAF6F0] border border-[#C9A55A]/15 rounded-sm p-8 md:p-10 shadow-[0_24px_60px_rgba(92,43,29,0.08)]">
+                <span className="font-body text-xs tracking-[0.2em] uppercase text-[#C9A55A]">
+                  Pilares do atendimento
+                </span>
+                <div className="mt-8 space-y-6">
+                  {[
+                    {
+                      icon: HeartHandshake,
+                      title: "Escuta atenta e consulta individualizada",
+                      text: "Cada plano terapêutico parte de uma avaliação cuidadosa da pele, da rotina, das queixas e dos objetivos de cada paciente.",
+                    },
+                    {
+                      icon: ScanFace,
+                      title: "Precisão diagnóstica e planejamento",
+                      text: "A condução clínica une raciocínio dermatológico, acompanhamento e escolhas alinhadas à necessidade real de cada caso.",
+                    },
+                    {
+                      icon: Gem,
+                      title: "Resultados naturais e elegantes",
+                      text: "Na estética, a prioridade é realçar a beleza com equilíbrio, leveza e respeito à identidade facial de cada paciente.",
+                    },
+                  ].map((item, index) => {
+                    const Icon = item.icon;
+                    return (
+                      <div key={index} className="grid grid-cols-[auto_1fr] gap-4 items-start">
+                        <div className="w-11 h-11 rounded-full border border-[#C9A55A]/30 bg-[#FFFDF8] flex items-center justify-center shrink-0">
+                          <Icon className="w-5 h-5 text-[#C9A55A]" />
+                        </div>
+                        <div className="space-y-2">
+                          <h3 className="font-display text-2xl text-[#5C2B1D] leading-tight">
+                            {item.title}
+                          </h3>
+                          <p className="font-body text-[15px] leading-7 text-[#5C2B1D]/72">
+                            {item.text}
+                          </p>
+                        </div>
+                      </div>
+                    );
+                  })}
+                </div>
+              </div>
+            </AnimatedSection>
 
-              <p className="font-display italic text-xl md:text-2xl text-[#5C2B1D] leading-relaxed mb-8 px-8">
-                {TESTIMONIALS[testimonialIndex].text}
-              </p>
+            <AnimatedSection delay={150}>
+              <div className="h-full bg-[#2A1208] text-[#F6F0E8] rounded-sm p-8 md:p-10 border border-[#C9A55A]/20 flex flex-col justify-between shadow-[0_24px_60px_rgba(42,18,8,0.18)]">
+                <div>
+                  <span className="font-body text-xs tracking-[0.2em] uppercase text-[#C9A55A]">
+                    O que orienta cada cuidado
+                  </span>
+                  <h3 className="font-display text-3xl md:text-4xl leading-tight mt-5">
+                    Segurança, constância e um olhar integral sobre a pele.
+                  </h3>
+                  <p className="font-body text-sm md:text-[15px] leading-7 text-[#F6F0E8]/78 mt-6">
+                    Do tratamento clínico à estética avançada, o atendimento é construído com responsabilidade, clareza nas orientações e acompanhamento próximo em cada etapa.
+                  </p>
+                </div>
 
-              <div className="w-8 h-[1px] bg-[#C9A55A] mx-auto mb-4" />
-
-              <p className="font-body text-sm text-[#5C2B1D]/70">
-                <span className="font-semibold">{TESTIMONIALS[testimonialIndex].name}</span>
-                {" · "}
-                {TESTIMONIALS[testimonialIndex].city}
-              </p>
-
-              {/* Navigation */}
-              <div className="flex items-center justify-center gap-6 mt-8">
-                <button
-                  onClick={prevTestimonial}
-                  className="w-10 h-10 border border-[#5C2B1D]/20 rounded-full flex items-center justify-center hover:bg-[#5C2B1D] hover:text-[#F2EDE4] transition-all duration-300 text-[#5C2B1D]"
-                  aria-label="Depoimento anterior"
-                >
-                  <ChevronLeft size={18} />
-                </button>
-                <div className="flex gap-2">
-                  {TESTIMONIALS.map((_, i) => (
-                    <button
-                      key={i}
-                      onClick={() => setTestimonialIndex(i)}
-                      className={`w-2 h-2 rounded-full transition-all duration-300 ${
-                        i === testimonialIndex
-                          ? "bg-[#C9A55A] w-6"
-                          : "bg-[#5C2B1D]/20"
-                      }`}
-                      aria-label={`Depoimento ${i + 1}`}
-                    />
+                <div className="mt-10 space-y-4">
+                  {[
+                    "Condutas personalizadas e baseadas em avaliação clínica",
+                    "Orientações claras para rotina, prevenção e manutenção",
+                    "Integração entre saúde, qualidade da pele e estética natural",
+                    "Acompanhamento próximo para evolução com confiança",
+                  ].map((item, index) => (
+                    <div key={index} className="flex items-start gap-3">
+                      <div className="w-6 h-6 rounded-full bg-[#C9A55A]/16 border border-[#C9A55A]/30 flex items-center justify-center mt-0.5 shrink-0">
+                        <Check className="w-3.5 h-3.5 text-[#C9A55A]" />
+                      </div>
+                      <p className="font-body text-sm md:text-[15px] leading-7 text-[#F6F0E8]/88">
+                        {item}
+                      </p>
+                    </div>
                   ))}
                 </div>
-                <button
-                  onClick={nextTestimonial}
-                  className="w-10 h-10 border border-[#5C2B1D]/20 rounded-full flex items-center justify-center hover:bg-[#5C2B1D] hover:text-[#F2EDE4] transition-all duration-300 text-[#5C2B1D]"
-                  aria-label="Próximo depoimento"
-                >
-                  <ChevronRight size={18} />
-                </button>
               </div>
-            </div>
-          </AnimatedSection>
+            </AnimatedSection>
+          </div>
         </div>
       </section>
 
