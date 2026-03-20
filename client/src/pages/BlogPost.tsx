@@ -103,8 +103,12 @@ export default function BlogPost() {
             {/* Author */}
             <div className="mt-12 p-6 bg-[#F2EDE4] rounded-sm border border-[#C9A55A]/15">
               <div className="flex items-center gap-4">
-                <div className="w-12 h-12 bg-[#5C2B1D] rounded-full flex items-center justify-center">
-                  <span className="font-script text-lg text-[#C9A55A]">MD</span>
+                <div className="w-12 h-12 rounded-full flex items-center justify-center overflow-hidden bg-transparent">
+                  <img
+                    src="https://d2xsxph8kpxj0f.cloudfront.net/310519663062738334/7aJWHo8S3YkG7RHgmPBpW2/LogosomenteMD-transparent_66a4aab4.png"
+                    alt="Logo Monique Damiano"
+                    className="w-10 h-10 object-contain"
+                  />
                 </div>
                 <div>
                   <p className="font-display text-base text-[#5C2B1D]">
