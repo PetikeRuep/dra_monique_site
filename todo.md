@@ -13,3 +13,8 @@
 - [ ] Substituir a grade atual por um grid estático de três posts.
 - [ ] Alterar o ícone/botão do WhatsApp para o verde tradicional.
 - [ ] Validar o resultado e criar novo checkpoint.
+- [ ] Identificar a referência atual da imagem da seção Sobre.
+- [ ] Enviar a nova foto da seção Sobre para URL persistente.
+- [ ] Atualizar a referência da imagem na seção Sobre.
+- [ ] Validar o site após a troca da imagem.
+- [ ] Criar novo checkpoint após a atualização.
