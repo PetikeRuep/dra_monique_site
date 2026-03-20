@@ -18,3 +18,8 @@
 - [ ] Atualizar a referência da imagem na seção Sobre.
 - [ ] Validar o site após a troca da imagem.
 - [ ] Criar novo checkpoint após a atualização.
+- [ ] Revisar quais cards da seção de dicas/blog na Home correspondem aos temas melasma, toxina botulínica e rotina de skincare.
+- [ ] Gerar três novas imagens temáticas alinhadas a cada tópico solicitado.
+- [ ] Atualizar os cards da Home com as novas imagens correspondentes.
+- [ ] Validar o resultado visual e a compilação do site.
+- [ ] Criar novo checkpoint após a atualização.

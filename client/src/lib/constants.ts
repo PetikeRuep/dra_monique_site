@@ -170,7 +170,7 @@ export const BLOG_POSTS = [
     excerpt: "Entenda o que é o melasma, suas causas e os tratamentos mais eficazes disponíveis atualmente na dermatologia.",
     category: "Dermatologia Clínica",
     date: "2025-05-20",
-    image: "https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?w=600&h=400&fit=crop",
+    image: "https://d2xsxph8kpxj0f.cloudfront.net/310519663062738334/7aJWHo8S3YkG7RHgmPBpW2/blog-melasma-card-3CgaDJozF5rAi8uy5Q9WGk.webp",
     content: "O melasma é uma condição de hiperpigmentação que afeta principalmente mulheres, causando manchas escuras no rosto. Fatores como exposição solar, hormônios e predisposição genética contribuem para seu aparecimento. O tratamento envolve uma combinação de fotoproteção rigorosa, despigmentantes tópicos e procedimentos em consultório como peelings e laser."
   },
   {
@@ -179,7 +179,7 @@ export const BLOG_POSTS = [
     excerpt: "Desmistificamos os principais mitos sobre a toxina botulínica e explicamos como o procedimento funciona na prática.",
     category: "Estética Avançada",
     date: "2025-04-10",
-    image: "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=600&h=400&fit=crop",
+    image: "https://d2xsxph8kpxj0f.cloudfront.net/310519663062738334/7aJWHo8S3YkG7RHgmPBpW2/blog-botox-card-jdRUe7Etot9q2tmAdvjYrJ.webp",
     content: "A toxina botulínica é um dos procedimentos estéticos mais realizados no mundo, mas ainda gera muitas dúvidas. Quando aplicada por um profissional qualificado, o resultado é natural e harmonioso, sem o temido aspecto congelado. O procedimento é rápido, com mínimo desconforto, e os resultados aparecem em poucos dias."
   },
   {
@@ -188,7 +188,7 @@ export const BLOG_POSTS = [
     excerpt: "Montar uma rotina de cuidados com a pele não precisa ser complicado. Veja o passo a passo essencial para começar.",
     category: "Skincare",
     date: "2025-03-25",
-    image: "https://images.unsplash.com/photo-1556228578-0d85b1a4d571?w=600&h=400&fit=crop",
+    image: "https://d2xsxph8kpxj0f.cloudfront.net/310519663062738334/7aJWHo8S3YkG7RHgmPBpW2/blog-skincare-card-abhuFsUCXgtYVn8hXTBAef.webp",
     content: "Uma boa rotina de skincare começa com três passos fundamentais: limpeza, hidratação e proteção solar. A limpeza remove impurezas e prepara a pele para receber os ativos. A hidratação mantém a barreira cutânea saudável. E o protetor solar é indispensável todos os dias, mesmo em ambientes internos."
   },
   {
