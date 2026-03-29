@@ -1,7 +1,7 @@
 # Brainstorm de Design — Dra. Monique Damiano
 
 ## Contexto
-Website profissional para dermatologista e especialista em medicina estética. Identidade visual baseada no Instagram @modamiano: sofisticado, acolhedor, feminino, quente. Paleta: marrom chocolate (#5C2B1D), creme off-white (#F2EDE4), branco quente (#FAFAF7), dourado suave (#C9A55A).
+Website profissional para dermatologista e especialista em medicina estética. Identidade visual baseada no Instagram @dra.moniquedamiano: sofisticado, acolhedor, feminino, quente. Paleta: marrom chocolate (#5C2B1D), creme off-white (#F2EDE4), branco quente (#FAFAF7), dourado suave (#C9A55A).
 
 ---
 
