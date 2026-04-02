@@ -115,7 +115,7 @@ export default function BlogPost() {
                     {SITE.fullName}
                   </p>
                   <p className="font-body text-xs text-[#5C2B1D]/60">
-                    {SITE.specialty} · {SITE.crmSP}
+                    {SITE.specialty} · {SITE.crmSP} · {SITE.crmRS}
                   </p>
                 </div>
               </div>

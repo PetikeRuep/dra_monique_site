@@ -8,6 +8,7 @@ import { useState } from "react";
 import { Link } from "wouter";
 import {
   SITE,
+  SEO,
   IMAGES,
   TREATMENTS_DERMA,
   TREATMENTS_ESTETICA,
@@ -19,6 +20,7 @@ import WhatsAppButton from "@/components/WhatsAppButton";
 import CookieBanner from "@/components/CookieBanner";
 import AnimatedSection from "@/components/AnimatedSection";
 import TreatmentModal from "@/components/TreatmentModal";
+import SEOHead from "@/components/SEOHead";
 import {
   Heart,
   Shield,
@@ -56,47 +58,61 @@ export default function Home() {
 
   return (
     <div className="min-h-screen">
+      <SEOHead
+        title={SEO.home.title}
+        description={SEO.home.description}
+        canonical={SITE.siteUrl}
+        ogImage={IMAGES.hero}
+      />
       <Navbar />
 
       {/* ===== SECTION 1: HERO ===== */}
       <section
         id="inicio"
-        className="relative min-h-screen flex items-center bg-[#FAFAF7] pt-20 overflow-hidden"
+        className="relative min-h-screen flex items-center bg-gradient-to-br from-[#FAFAF7] to-[#F2EDE4] pt-20 overflow-hidden"
       >
         <div className="container grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-0 items-center py-12 lg:py-0">
           {/* Left Column — Text */}
-          <div className="lg:col-span-5 space-y-6 lg:space-y-8 z-10 order-2 lg:order-1">
+          <div className="lg:col-span-5 space-y-5 lg:space-y-6 z-10 order-2 lg:order-1">
             <AnimatedSection>
-              <span className="inline-block font-body text-xs tracking-[0.25em] uppercase text-[#5C2B1D]/60 border border-[#C9A55A]/30 px-4 py-1.5 rounded-sm">
-                Dermatologia | Medicina Estética
+              <span className="inline-block font-body text-xs tracking-[0.25em] uppercase text-[#5C2B1D] bg-[#C9A55A]/10 border border-[#C9A55A]/35 px-4 py-1.5 rounded-sm">
+                {SITE.specialty}
               </span>
             </AnimatedSection>
 
             <AnimatedSection delay={150}>
-              <h1 className="font-script text-5xl md:text-6xl lg:text-7xl text-[#5C2B1D] leading-tight">
-                Medicina e Beleza
+              <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-semibold text-[#4A2015] leading-tight">
+                Dra. Monique Damiano
               </h1>
             </AnimatedSection>
 
-            <AnimatedSection delay={300}>
-              <p className="font-display italic text-xl md:text-2xl text-[#5C2B1D]/70 leading-relaxed">
-                Pele, Saúde e Beleza
+            <AnimatedSection delay={220}>
+              <p className="font-display italic text-lg md:text-xl text-[#C9A55A] leading-snug">
+                ✦ São Paulo (SP) &amp; Marau (RS) ✦
               </p>
             </AnimatedSection>
 
-            <AnimatedSection delay={450}>
+            <AnimatedSection delay={300}>
+              <p className="font-body text-base text-[#5C2B1D]/80 leading-relaxed">
+                Pele, Saúde e Beleza — tratamentos personalizados para{" "}
+                <strong className="font-medium text-[#5C2B1D]">acne, melasma, rejuvenescimento facial</strong>{" "}
+                e saúde da pele, com foco em resultados naturais e duradouros.
+              </p>
+            </AnimatedSection>
+
+            <AnimatedSection delay={420}>
               <div className="flex flex-col sm:flex-row gap-3 pt-2">
-                <a
-                  href="#tratamentos"
-                  className="px-7 py-3.5 bg-[#5C2B1D] text-[#F2EDE4] font-body text-xs tracking-[0.15em] uppercase hover:bg-[#7A3D2A] transition-all duration-300 rounded-sm text-center"
+                <Link
+                  href="/tratamentos"
+                  className="px-7 py-3.5 bg-[#5C2B1D] text-[#F2EDE4] font-body text-xs tracking-[0.15em] uppercase hover:bg-[#7A3D2A] transition-all duration-300 rounded-sm text-center shadow-[0_4px_16px_rgba(92,43,29,0.2)]"
                 >
                   Conheça os Tratamentos
-                </a>
+                </Link>
                 <a
                   href={SITE.whatsappSPLink}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="px-7 py-3.5 border border-[#5C2B1D] text-[#5C2B1D] font-body text-xs tracking-[0.15em] uppercase hover:bg-[#5C2B1D] hover:text-[#F2EDE4] transition-all duration-300 rounded-sm text-center"
+                  className="px-7 py-3.5 border border-[#C9A55A] text-[#5C2B1D] font-body text-xs tracking-[0.15em] uppercase hover:bg-[#5C2B1D] hover:text-[#F2EDE4] hover:border-[#5C2B1D] transition-all duration-300 rounded-sm text-center"
                 >
                   Agendar pelo WhatsApp
                 </a>
@@ -117,7 +133,7 @@ export default function Home() {
                 <div className="absolute -top-3 -right-3 w-full h-full border border-[#C9A55A]/30 rounded-sm" />
                 <img
                   src={IMAGES.hero}
-                  alt="Dra. Monique Damiano"
+                  alt="Dra. Monique Damiano — Medicina Estética e Saúde da Pele em São Paulo e Marau"
                   className="relative w-full h-[500px] lg:h-[520px] object-cover object-top rounded-sm"
                   loading="eager"
                 />
@@ -135,7 +151,7 @@ export default function Home() {
       </section>
 
       {/* ===== SECTION 2: SOBRE ===== */}
-      <section id="sobre" className="py-20 lg:py-28 bg-[#FAFAF7]">
+      <section id="sobre" className="py-20 lg:py-28 bg-[#F5F0E8]">
         <div className="container">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             {/* Text */}
@@ -253,10 +269,10 @@ export default function Home() {
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
               {TREATMENTS_DERMA.map((t, i) => (
-                <AnimatedSection key={t.name} delay={i * 60}>
-                  <button
-                    onClick={() => setSelectedTreatment(t)}
-                    className="w-full text-left bg-[#FAFAF7] border border-[#C9A55A]/15 p-6 rounded-sm group hover:bg-[#5C2B1D] transition-all duration-500 h-full"
+                <AnimatedSection key={t.slug} delay={i * 60}>
+                  <Link
+                    href={`/tratamentos/${t.slug}`}
+                    className="w-full text-left bg-[#FAFAF7] border border-[#C9A55A]/20 p-6 rounded-sm group hover:bg-[#5C2B1D] transition-all duration-500 h-full block"
                   >
                     <h4 className="font-display italic text-lg text-[#5C2B1D] group-hover:text-[#F2EDE4] transition-colors duration-500 mb-2">
                       {t.name}
@@ -264,10 +280,10 @@ export default function Home() {
                     <p className="font-body text-xs text-[#5C2B1D]/60 group-hover:text-[#F2EDE4]/70 transition-colors duration-500 leading-relaxed line-clamp-3">
                       {t.description}
                     </p>
-                    <span className="inline-block mt-3 font-body text-xs text-[#C9A55A] group-hover:text-[#C9A55A] tracking-wider uppercase">
+                    <span className="inline-block mt-3 font-body text-xs text-[#C9A55A] tracking-wider uppercase">
                       Saiba mais →
                     </span>
-                  </button>
+                  </Link>
                 </AnimatedSection>
               ))}
             </div>
@@ -294,10 +310,10 @@ export default function Home() {
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
               {TREATMENTS_ESTETICA.map((t, i) => (
-                <AnimatedSection key={t.name} delay={i * 60}>
-                  <button
-                    onClick={() => setSelectedTreatment(t)}
-                    className="w-full text-left bg-[#FAFAF7] border border-[#C9A55A]/15 p-6 rounded-sm group hover:bg-[#5C2B1D] transition-all duration-500 h-full"
+                <AnimatedSection key={t.slug} delay={i * 60}>
+                  <Link
+                    href={`/tratamentos/${t.slug}`}
+                    className="w-full text-left bg-[#FAFAF7] border border-[#C9A55A]/20 p-6 rounded-sm group hover:bg-[#5C2B1D] transition-all duration-500 h-full block"
                   >
                     <h4 className="font-display italic text-lg text-[#5C2B1D] group-hover:text-[#F2EDE4] transition-colors duration-500 mb-2">
                       {t.name}
@@ -305,10 +321,10 @@ export default function Home() {
                     <p className="font-body text-xs text-[#5C2B1D]/60 group-hover:text-[#F2EDE4]/70 transition-colors duration-500 leading-relaxed line-clamp-3">
                       {t.description}
                     </p>
-                    <span className="inline-block mt-3 font-body text-xs text-[#C9A55A] group-hover:text-[#C9A55A] tracking-wider uppercase">
+                    <span className="inline-block mt-3 font-body text-xs text-[#C9A55A] tracking-wider uppercase">
                       Saiba mais →
                     </span>
-                  </button>
+                  </Link>
                 </AnimatedSection>
               ))}
             </div>

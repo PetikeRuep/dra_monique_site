@@ -1,8 +1,7 @@
 /*
  * DESIGN: "Atelier de Beleza" — Editorial de Moda de Luxo
- * Navbar: Sticky, warm white bg, subtle shadow on scroll
- * Left: MD monogram + "Monique Damiano"
- * Right: Nav links + CTA button
+ * Navbar: todos os links agora são rotas reais (multi-page)
+ * Indicador de página ativa com underline dourado
  */
 import { useState, useEffect } from "react";
 import { NAV_LINKS, SITE } from "@/lib/constants";
@@ -20,16 +19,15 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const handleNavClick = (href: string) => {
+  // Fecha menu mobile ao navegar
+  useEffect(() => {
     setMobileOpen(false);
-    if (href.startsWith("#")) {
-      if (location !== "/") {
-        window.location.href = "/" + href;
-        return;
-      }
-      const el = document.querySelector(href);
-      if (el) el.scrollIntoView({ behavior: "smooth" });
-    }
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, [location]);
+
+  const isActive = (href: string) => {
+    if (href === "/") return location === "/";
+    return location.startsWith(href);
   };
 
   return (
@@ -62,25 +60,20 @@ export default function Navbar() {
 
         {/* Desktop Nav */}
         <div className="hidden lg:flex items-center gap-8">
-          {NAV_LINKS.map((link) =>
-            link.href.startsWith("/") ? (
-              <Link
-                key={link.label}
-                href={link.href}
-                className="font-display tracking-wide text-[#5C2B1D]/70 hover:text-[#5C2B1D] transition-colors duration-300 relative after:content-[''] after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-[1px] after:bg-[#C9A55A] after:transition-all after:duration-300 hover:after:w-full text-[22px]"
-              >
-                {link.label}
-              </Link>
-            ) : (
-              <button
-                key={link.label}
-                onClick={() => handleNavClick(link.href)}
-                className="font-display tracking-wide text-[#5C2B1D]/70 hover:text-[#5C2B1D] transition-colors duration-300 relative after:content-[''] after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-[1px] after:bg-[#C9A55A] after:transition-all after:duration-300 hover:after:w-full text-[22px]"
-              >
-                {link.label}
-              </button>
-            )
-          )}
+          {NAV_LINKS.map((link) => (
+            <Link
+              key={link.label}
+              href={link.href}
+              className={`font-display tracking-wide transition-colors duration-300 relative text-[20px]
+                after:content-[''] after:absolute after:bottom-[-4px] after:left-0 after:h-[1px] after:bg-[#C9A55A] after:transition-all after:duration-300
+                ${isActive(link.href)
+                  ? "text-[#5C2B1D] after:w-full"
+                  : "text-[#5C2B1D]/70 hover:text-[#5C2B1D] after:w-0 hover:after:w-full"
+                }`}
+            >
+              {link.label}
+            </Link>
+          ))}
           <a
             href={SITE.whatsappSPLink}
             target="_blank"
@@ -108,26 +101,20 @@ export default function Navbar() {
         }`}
       >
         <div className="bg-[#FAFAF7] border-t border-[#C9A55A]/20 px-6 py-6 space-y-4">
-          {NAV_LINKS.map((link) =>
-            link.href.startsWith("/") ? (
-              <Link
-                key={link.label}
-                href={link.href}
-                onClick={() => setMobileOpen(false)}
-                className="block font-display text-lg text-[#5C2B1D] tracking-wide"
-              >
-                {link.label}
-              </Link>
-            ) : (
-              <button
-                key={link.label}
-                onClick={() => handleNavClick(link.href)}
-                className="block font-display text-lg text-[#5C2B1D] tracking-wide"
-              >
-                {link.label}
-              </button>
-            )
-          )}
+          {NAV_LINKS.map((link) => (
+            <Link
+              key={link.label}
+              href={link.href}
+              className={`block font-display text-lg tracking-wide transition-colors duration-200 ${
+                isActive(link.href) ? "text-[#5C2B1D]" : "text-[#5C2B1D]/70"
+              }`}
+            >
+              {isActive(link.href) && (
+                <span className="inline-block w-2 h-2 rounded-full bg-[#C9A55A] mr-2 mb-0.5" />
+              )}
+              {link.label}
+            </Link>
+          ))}
           <a
             href={SITE.whatsappSPLink}
             target="_blank"

@@ -8,11 +8,19 @@ import Home from "./pages/Home";
 import Blog from "./pages/Blog";
 import BlogPost from "./pages/BlogPost";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
+import Sobre from "./pages/Sobre";
+import Tratamentos from "./pages/Tratamentos";
+import TratamentoDetalhe from "./pages/TratamentoDetalhe";
+import Contato from "./pages/Contato";
 
 function Router() {
   return (
     <Switch>
       <Route path="/" component={Home} />
+      <Route path="/sobre" component={Sobre} />
+      <Route path="/tratamentos" component={Tratamentos} />
+      <Route path="/tratamentos/:slug" component={TratamentoDetalhe} />
+      <Route path="/contato" component={Contato} />
       <Route path="/blog" component={Blog} />
       <Route path="/blog/:slug" component={BlogPost} />
       <Route path="/politica-de-privacidade" component={PrivacyPolicy} />
